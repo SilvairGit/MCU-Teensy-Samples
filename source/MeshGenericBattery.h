@@ -1,0 +1,52 @@
+/*
+Copyright © 2017 Silvair Sp. z o.o. All Rights Reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished
+to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+#ifndef MESHGENERICBATTERY_H_
+#define MESHGENERICBATTERY_H_
+
+#define BATTERY_LEVEL_MAX 0x64
+#define BATTERY_LEVEL_UNKNOWN 0xFF
+
+#define BATTERY_TIME_TO_DISCHARGE_UNKNOWN 0xFFFFFF
+
+#define BATTERY_TIME_TO_CHARGE_UNKNOWN 0xFFFFFF
+
+#define BATTERY_FLAGS_PRESENCE_NOT_PRESENT (0b00 << 0)
+#define BATTERY_FLAGS_PRESENCE_PRESENT_AND_REMOVABLE (0b01 << 0)
+#define BATTERY_FLAGS_PRESENCE_PRESENT_AND_NON_REMOVABLE (0b10 << 0)
+#define BATTERY_FLAGS_PRESENCE_UNKNOWN (0b11 << 0)
+
+#define BATTERY_FLAGS_INDICATOR_CRITICALLY_LOW_LEVEL (0b00 << 2)
+#define BATTERY_FLAGS_INDICATOR_LOW_LEVEL (0b01 << 2)
+#define BATTERY_FLAGS_INDICATOR_GOOD_LEVEL (0b10 << 2)
+#define BATTERY_FLAGS_INDICATOR_UNKNOWN (0b11 << 2)
+
+#define BATTERY_FLAGS_CHARGING_IS_NOT_CHARGEABLE (0b00 << 4)
+#define BATTERY_FLAGS_CHARGING_IS_CHARGEABLE_AND_IS_NOT_CHARGING (0b01 << 4)
+#define BATTERY_FLAGS_CHARGING_IS_CHARGEABLE_AND_IS_CHARGING (0b10 << 4)
+#define BATTERY_FLAGS_CHARGING_UNKNOWN (0b11 << 4)
+
+#define BATTERY_FLAGS_SERVICEABILITY_RFU (0b00 << 6)
+#define BATTERY_FLAGS_SERVICEABILITY_BATTERY_DOES_NOT_REQUIRE_SERVICE (0b01 << 6)
+#define BATTERY_FLAGS_SERVICEABILITY_BATTERY_REQUIRES_SERVICE (0b10 << 6)
+#define BATTERY_FLAGS_SERVICEABILITY_UNKNOWN (0b11 << 6)
+
+#endif /* MESHGENERICBATTERY_H_ */
